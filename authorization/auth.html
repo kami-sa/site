@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../css/style.css" >
+    <script type="text/javascript" src="../scripts/reg_scripts.js"></script>
+</head>
+<body>
+<div class="navigation flex-container3">
+    <form class="navigation flex-container3" action="../authorization/auth.php" method="post" >
+        <h1 class="head flex-block3">Вход</h1>
+        <input id="e" type="email" name="email" placeholder="Email" required>
+        <input id="p" type="password" name="pass" placeholder="Пароль" required>
+        <label><input id="с" type="checkbox" name="check_session" value="Yes">Запомнить меня</label>
+        <input class="flex-block3 button" type="submit" value="Войти">
+    </form>
+</div>
+</body>
+</html>
