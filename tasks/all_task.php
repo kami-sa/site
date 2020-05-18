@@ -2,13 +2,17 @@
     <head>
         <title>Выбор задания</title>
         <link rel="stylesheet" type="text/css" media="all" href="../css/style.css" >
+        <script>
+            var form = document.getElementById("task_form")
+            var field = document.getElementById("board")
+        </script>
 
     </head>
     <body>
         <?php
             require "../db/connect.php";
         ?>
-        <form action="all_task.php" method="post">
+        <form action="all_task.php" method="post" id="task_form">
             <select name="subject">
                 <?php
                     $result = mysqli_query($db, "SELECT DISTINCT subject FROM themes ");

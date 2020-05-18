@@ -20,5 +20,6 @@
     $id = $array['id'];
     $query =  "INSERT INTO users (id, email, pass, salt, pupils_id) VALUES (NULL, '$email', '$pass', '$salt', $id)";
     $result = mysqli_query($db, $query);
-
+    header("Location: http://localhost/site/main_page/main.php");
+    exit();
 ?>

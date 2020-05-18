@@ -8,4 +8,5 @@
     }
     else
         require "../authorization/auth.html";
+//$section = []
 ?>

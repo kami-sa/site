@@ -1,4 +1,7 @@
 .field{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     height: 550px;
     width: 900px;
     border: #1d4a2f solid 1px;

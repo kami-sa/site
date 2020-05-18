@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Регистрация</title>
     <link rel="stylesheet" type="text/css" media="all" href="../css/style.css" >
-    <script type="text/javascript" src="../scripts/reg_scripts.js"></script>
 </head>
 <body>
     <div class="navigation flex-container3">
@@ -18,5 +17,6 @@
             <input class="flex-block3 button" type="submit" value="Зарегистрироваться" onclick="return isRegDataValid();">
         </form>
     </div>
+    <script type="text/javascript" src="../scripts/reg_scripts.js"></script>
 </body>
 </html>
