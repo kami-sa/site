@@ -2,15 +2,15 @@
 body{
   display: flex;
   margin: 0;
-  background-color: #ccffe3;
+  background-color: #5CCDC9;
   flex-direction: row;
   font-family: "Roboto";
 }
 .navigation{
-  background-color: #43e0a0;
+  background-color: #009B95;
   border-radius: 25px;
-  border: 1px solid #44be7d;
-  box-shadow: #99c5aa 0 5px 10px;
+  border: 1px solid #006561;
+  box-shadow: #1D7471 0 5px 10px;
 }
 .footer{
   margin: auto;

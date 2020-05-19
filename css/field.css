@@ -4,10 +4,12 @@
     justify-content: flex-start;
     height: 550px;
     width: 900px;
-    border: #1d4a2f solid 1px;
+    top: 10px;
+    border: #006561 solid 1px;
+    box-shadow: #1D7471 0 5px 10px;
     border-radius: 10px;
     position: relative;
-    margin-left: 320px;
+    margin-left: 250px;
     /*position: relative;*/
     /*position: fixed;*/
     /*position: absolute;*/
