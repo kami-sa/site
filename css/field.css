@@ -6,7 +6,10 @@
     width: 900px;
     border: #1d4a2f solid 1px;
     border-radius: 10px;
+    position: relative;
+    margin-left: 320px;
     /*position: relative;*/
-    position: fixed;
-    /*margin-left: 255px;*/
+    /*position: fixed;*/
+    /*position: absolute;*/
+    /*margin-left: 0px;*/
 }

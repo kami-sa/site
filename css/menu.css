@@ -1,9 +1,10 @@
 .menu{
+    position: absolute;
     margin: 0px;
     margin: 0px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     width: 300px;
     height: 210px;
     /*border: 1px solid #44be7d;*/
@@ -35,7 +36,7 @@
     transform: rotate(180deg);
 }
 .container{
-    /*position: absolute;*/
+    position: absolute;
     display: flex;
     flex-direction: column;
     height: 200px;
@@ -45,7 +46,7 @@
     border-radius: 25px;
     border: 1px solid #44be7d;
     box-shadow: #99c5aa 0 5px 10px;
-    /*margin-left: 27px;*/
+    /*margin-left: -27px;*/
     /*margin-top: 20px;*/
 
 }
