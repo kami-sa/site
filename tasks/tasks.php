@@ -3,6 +3,10 @@
         <meta charset="UTF-8">
         <title>Поиск по заданиям</title>
         <script type="text/javascript" src="../scripts/task_search.js"></script>
+
+        <link rel="stylesheet" type="text/css" media="all" href="../css/style.css" >
+        <link rel="stylesheet" type="text/css" media="all" href="../css/menu.css" >
+        <link rel="stylesheet" type="text/css" media="all" href="../css/field.css" >
     </head>
     <body>
         <?php
@@ -55,5 +59,8 @@
             </select>
             <input type="submit" value="Вывести список подходящих заданий" name="search" id="search">
         </form>
+
+        <script type="text/javascript" src="../scripts/jquery.js"></script>
+        <script type="text/javascript" src="../scripts/animation.js"></script>
     </body>
 </html>

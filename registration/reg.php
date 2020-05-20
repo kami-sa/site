@@ -14,6 +14,7 @@
             <input id="e" type="email" name="email" placeholder="Email" required>
             <input id="p" type="password" name="pass" placeholder="Пароль" required>
             <input id="rp" type="password" name="re_pass" placeholder="Повторите пароль" required>
+            <a href="../authorization/auth.html" style="color:#004b43;text-decoration: none;margin-left: 16px">Вернуться к авторизации</a>
             <input class="flex-block3 button" type="submit" value="Зарегистрироваться" onclick="return isRegDataValid();">
         </form>
     </div>

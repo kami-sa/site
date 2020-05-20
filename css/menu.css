@@ -4,9 +4,10 @@
     flex-direction: row;
     justify-content: flex-start;
     top:10px;
-    width: 300px;
+    min-width: 25px;
     height: 210px;
     /*border: 1px solid #44be7d;*/
+    left: 10px;
 
 }
 .slide{
@@ -16,11 +17,22 @@
     /*margin-top: 120px;*/
     height: 200px;
     width: 20px;
-    background-color: #009B95;
-    border-radius: 25px;
-    border: 1px solid #006561;
-    box-shadow: #1D7471 0 5px 10px;
-    margin-right: 5px ;
+
+    /*background-color: #66CC99;*/
+    /*border-radius: 25px;*/
+    /*border: 1px solid #339966;*/
+    /*box-shadow: #339966 0 5px 10px;*/
+
+    background-color: #94c0c2;
+    border-radius: 10px;
+    border: 1px solid #296e6b;
+    box-shadow: #296e6b 0 5px 20px;
+
+    /*background-color: #66CC99;*/
+    /*border-radius: 25px;*/
+    /*border: 1px solid #339966;*/
+    /*box-shadow: #339966 0 5px 10px;*/
+    margin-right: 5px;
     /*padding-right: 5px;*/
     /*transform: rotate(270deg);*/
     /*align-content: center;*/
@@ -31,7 +43,8 @@
     text-transform: uppercase;
     writing-mode: vertical-rl;
     letter-spacing: 3px;
-    text-color: #1d4a2f;
+    /*text-color: #1d4a2f;*/
+    text-color: #2b4a4a;
     transform: rotate(180deg);
 }
 .container{
@@ -41,10 +54,22 @@
     height: 200px;
     width: 220px;
     justify-content: space-around;
-    background-color: #009B95;
-    border-radius: 25px;
-    border: 1px solid #006561;
-    box-shadow: #1D7471 0 5px 10px;
+
+    /*background-color: #66CC99;*/
+    /*border-radius: 25px;*/
+    /*border: 1px solid #339966;*/
+    /*box-shadow: #339966 0 5px 10px;*/
+
+    background-color: #94c0c2;
+    border-radius: 10px;
+    border: 1px solid #296e6b;
+    box-shadow: #296e6b 0 5px 10px;
+
+    /*background-color: #66CC99;*/
+    /*border-radius: 25px;*/
+    /*border: 1px solid #339966;*/
+    /*box-shadow: #339966 0 5px 10px;*/
+
     /*margin-left: -27px;*/
     /*margin-top: 20px;*/
 
@@ -52,7 +77,8 @@
 
 div a{
     text-decoration: none;
-    color: #1d4a2f;
+    /*color: #1d4a2f;*/
+    color: #2b4a4a;
     padding-left: 10px;
 }
 

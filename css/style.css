@@ -2,15 +2,30 @@
 body{
   display: flex;
   margin: 0;
-  background-color: #5CCDC9;
   flex-direction: row;
   font-family: "Roboto";
+
+  /*background-color: #CCFFCC;*/
+  background-color: #dae4e5;
+  /*background-color: #CCFFCC;*/
 }
 .navigation{
-  background-color: #009B95;
+  /*background-color: #66CC99;*/
+  /*border-radius: 25px;*/
+  /*border: 1px solid #339966;*/
+  /*box-shadow: #99CCCC 0 5px 10px;*/
+
+
+  background-color: #94c0c2;
   border-radius: 25px;
-  border: 1px solid #006561;
-  box-shadow: #1D7471 0 5px 10px;
+  border: 1px solid #296e6b;
+  box-shadow: #296e6b 0 5px 20px;
+
+
+  /*background-color: #66CC99;*/
+  /*border-radius: 25px;*/
+  /*border: 1px solid #339966;*/
+  /*box-shadow: #99CCCC 0 5px 10px;*/
 }
 .footer{
   margin: auto;
