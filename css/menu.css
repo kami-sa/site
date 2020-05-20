@@ -38,6 +38,7 @@
     /*align-content: center;*/
 
     /*transform: rotate(90deg);*/
+    transition-duration:3s
 }
 #slide_text{
     text-transform: uppercase;
@@ -72,6 +73,8 @@
 
     /*margin-left: -27px;*/
     /*margin-top: 20px;*/
+    transition-duration:3s
+
 
 }
 
@@ -80,5 +83,11 @@ div a{
     /*color: #1d4a2f;*/
     color: #2b4a4a;
     padding-left: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Times New Roman", Georgia, Serif;
+    font-weight: bold;
+
+
 }
 

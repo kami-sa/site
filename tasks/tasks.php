@@ -2,8 +2,6 @@
     <head>
         <meta charset="UTF-8">
         <title>Поиск по заданиям</title>
-        <script type="text/javascript" src="../scripts/task_search.js"></script>
-
         <link rel="stylesheet" type="text/css" media="all" href="../css/style.css" >
         <link rel="stylesheet" type="text/css" media="all" href="../css/menu.css" >
         <link rel="stylesheet" type="text/css" media="all" href="../css/field.css" >
@@ -14,7 +12,7 @@
         require "../main_page/menu.html";
         require "../main_page/field.html";
         ?>
-        <form action="all_task.php" method="post" id="task_form">
+        <form action="tasks.php" method="post" id="task_form">
             <select name="subject" id="subject">
                 <?php
                 $result = mysqli_query($db, "SELECT DISTINCT subject FROM themes ");
@@ -58,9 +56,52 @@
                 ?>
             </select>
             <input type="submit" value="Вывести список подходящих заданий" name="search" id="search">
+            <p style="color: #2b4a4a;text-transform: uppercase;font-family:'Times New Roman', Georgia, Serif;font-weight: bold;">Для возвращения назад к списку задач нажмите на условие задачи</p>
+
         </form>
+
+<?php
+    $s = $_POST['subject'];
+    $g = $_POST['grade'];
+    $t_n = $_POST['theme_name'];
+    $d = $_POST['difficulty'];
+    if (!empty($_POST))
+    {
+        $query = "SELECT tasks.id, themes.name FROM tasks
+                                                    LEFT JOIN rel_tasks_themes ON tasks.id = rel_tasks_themes.tasks_id
+                                                    LEFT JOIN themes ON themes.id = rel_tasks_themes.themes_id
+                                                    WHERE themes.subject = $s 
+                                                    AND tasks.grade = $g 
+                                                    AND themes.name = \"$t_n\"";
+        if ($d != 0)
+            $query .= "AND tasks.difficulty = $d";
+
+        $result = mysqli_query($db, $query);
+                if (!$result) {
+                    die('Invalid query: ' . mysqli_error());
+                }
+        while($array = mysqli_fetch_array($result))
+        {
+            $id = $array['id'];
+            echo "<a href='#' class='task' id='task$id'>",$array['id']," ",str_replace("_"," ",$array['name']),"</a>";
+            $q = "SELECT * FROM tasks LEFT JOIN rel_tasks_themes ON tasks.id = rel_tasks_themes.tasks_id
+                                                LEFT JOIN themes ON themes.id = rel_tasks_themes.themes_id
+                                                WHERE tasks.id = $id";
+            $res = mysqli_query($db, $q);
+            $image = "";
+            $array = mysqli_fetch_array($res);
+            if ($array['subject'] == 0) {
+                $sub = "Геометрия";
+            } else $sub = "Алгебра";
+            $image .= "../Задачи/" . $sub . "/" . $array['grade'] . "/" . $array['name'] . "/" . $array['image_name'];
+            echo "<div style='display: none' class='task_block' id='task_block$id'><p>", $array['text'], "</p><img src=\"$image\"></div>";
+
+        }
+    }
+?>
 
         <script type="text/javascript" src="../scripts/jquery.js"></script>
         <script type="text/javascript" src="../scripts/animation.js"></script>
+        <script type="text/javascript" src="../scripts/task_search.js"></script>
     </body>
 </html>

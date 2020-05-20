@@ -23,4 +23,6 @@
     /*position: fixed;*/
     /*position: absolute;*/
     /*margin-left: 0px;*/
+    transition-duration:.3s;
+    padding-left: 10px;
 }

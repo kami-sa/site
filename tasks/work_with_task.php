@@ -22,7 +22,7 @@
                     $sub = "Геометрия";
                 }
                 else $sub = "Алгебра";
-                $image .="/Задания/".$sub."/".$array['grade']."/".$array['name']."/".$array['image_name'];
+                $image .="/Задачи/".$sub."/".$array['grade']."/".$array['name']."/".$array['image_name'];
                 echo "<img src=",$image,">";
             }
 
