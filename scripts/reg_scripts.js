@@ -34,3 +34,39 @@
             else
                 window.location.href="../authorization/auth.html"
         }
+
+        $("#reg_form").mousemove(function () {
+            console.log("here")
+            $(":input").each(function () {
+                //if ($(this).val() === '') {
+                    //$(":empty").blur(function(){
+                    $(this).blur(function () {
+                        console.log("here1")
+                        if ($(this).val() === '')
+                            $(this).addClass("error")
+                            $("#attention").show()
+                            $("#attention").html("<p>Заполните пустые поля</p>")
+                    })
+                    $(this).focus(function () {
+                        console.log("here2")
+                        $(this).removeClass("error")
+                        $("#attention").hide()
+                    })
+                // }
+                // else
+                // {
+                //     $(this).blur(function(){
+                //         console.log("here3")
+                //         $(this).removeClass("error")
+                //     })
+                // }
+            })
+
+            $("#rp").blur(function () {
+                if ($("#p").val() != $("#rp").val())
+                    $("#attention").html("<p>Пароли не совпадают</p>")
+
+            })
+
+
+    })

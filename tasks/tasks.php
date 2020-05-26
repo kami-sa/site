@@ -56,7 +56,7 @@
                 ?>
             </select>
             <input type="submit" value="Вывести список подходящих заданий" name="search" id="search">
-            <p style="color: #2b4a4a;text-transform: uppercase;font-family:'Times New Roman', Georgia, Serif;font-weight: bold;">Для возвращения назад к списку задач нажмите на условие задачи</p>
+<!--            <p style="color: #2b4a4a;text-transform: uppercase;font-family:'Times New Roman', Georgia, Serif;font-weight: bold;">Для возвращения назад к списку задач нажмите на условие задачи</p>-->
 
         </form>
 
@@ -80,10 +80,11 @@
                 if (!$result) {
                     die('Invalid query: ' . mysqli_error());
                 }
+                echo "<div id='block_task'>";
         while($array = mysqli_fetch_array($result))
         {
             $id = $array['id'];
-            echo "<a href='#' class='task' id='task$id'>",$array['id']," ",str_replace("_"," ",$array['name']),"</a>";
+            echo "<a href='#' class='task' id='task$id'>",$array['id']," ",str_replace("_"," ",$array['name']),  "</a>" ;
             $q = "SELECT * FROM tasks LEFT JOIN rel_tasks_themes ON tasks.id = rel_tasks_themes.tasks_id
                                                 LEFT JOIN themes ON themes.id = rel_tasks_themes.themes_id
                                                 WHERE tasks.id = $id";
@@ -97,8 +98,10 @@
             echo "<div style='display: none' class='task_block' id='task_block$id'><p>", $array['text'], "</p><img src=\"$image\"></div>";
 
         }
+        echo "</div>";
     }
 ?>
+<!--        <img style="width: 64px;height: 64px;" id="back" src="../icons/back.png">-->
 
         <script type="text/javascript" src="../scripts/jquery.js"></script>
         <script type="text/javascript" src="../scripts/animation.js"></script>

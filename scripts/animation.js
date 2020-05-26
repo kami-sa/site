@@ -37,4 +37,7 @@ $("#l1, #l2, #l3, #l4, .task").mouseout(function () {
     $(this).css("text-decoration","none")
 })
 
+$("#board1").html($(".user_info"))
+
+
 

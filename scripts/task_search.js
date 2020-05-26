@@ -5,12 +5,16 @@
 // }
 
 // $().insertAfter("<div class=\"field\" id=\"board\">")
-$("#board").html($("#task_form"))
+$("#board1").html($("#task_form"))
 $("#task_form").css("margin-left","10px")
 $(".task").insertAfter($("#task_form"))
-// $("#btn").click(function () {
-//     $("#board").html($("#task1"))
-// })
+$("#btn").click(function () {
+    $("#board").html($("#task1"))
+})
+
+// $("#back").html($("#task_form"))
+
+
 var id1, id2
 
 $("[id ^= task]").click(function() {
@@ -25,13 +29,39 @@ $("[id ^= task]").click(function() {
     $(".task:focus").show();
     $(id2).insertAfter($(".task:focus"))
     $(id2).show();
+    $("#back").show()
 })
 
 
 $("[id ^= task_block]").click(function () {
-    // $("#"+id1).blur()
     $(".task:hidden").show()
     $(this).hide()
-    //$(".task").show()
+})
+
+$("#back").click(function () {
+    $(".task:hidden").show()
+    $("[id ^= task_block]:visible").hide()
+    $("#back").hide()
 
 })
+
+// $(document).ready(function(){
+//
+//     $("#search").click(function () {
+//         console.log("Ajax start")
+//         var param = "subject=" + $("#subject").val() + "&" + "grade=" + $("#grade").val() + "&" + "theme_name=" + $("#theme_name").val()
+//         if ($("#difficulty").val() != 0)
+//             param = param + "&" + "difficulty=" + $("#difficulty").val();
+//         console.log(param)
+//         $.ajax({
+//             type: "POST",
+//             url: "tasks2.php",
+//             data: param,
+//             success: function(html){
+//                 $("#board1").html(html);
+//             }
+//         });
+//         return false;
+//     });
+//
+// });

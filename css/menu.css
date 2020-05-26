@@ -38,7 +38,7 @@
     /*align-content: center;*/
 
     /*transform: rotate(90deg);*/
-    transition-duration:3s
+    /*transition-duration:.3s*/
 }
 #slide_text{
     text-transform: uppercase;
@@ -73,7 +73,7 @@
 
     /*margin-left: -27px;*/
     /*margin-top: 20px;*/
-    transition-duration:3s
+    /*transition-duration:.3s*/
 
 
 }
@@ -90,4 +90,5 @@ div a{
 
 
 }
+
 
